@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Informacion detallada</title>
+</head>
+
+    <header>
+        <h1>Fund. Apoyo</h1>
+    </header>
+<body>
+<div class="container_info_residentes">
+    <div class="left-container_ficha">
+        <h1>Residente</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre residente</th>
+                    <th>Apellido Residente</th>
+                    <th>Rut</th>
+                    <th>Edad</th>
+                    <th>Fecha de ingreso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>11.111.111-1</td>
+                    <td>##</td>
+                    <td>DD/MM/YYYY</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn_form"><a href="modificar_datos_residente.html">Modificar</a></button>
+
+        <h1>Contacto de emergencia</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Tel. de emerg.</th>
+                    <th>Tel. de emerg. 2</th>
+                    <th>Direccion</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Correo@gmail.com</td>
+                    <td>+## # #### ####</td>
+                    <td>+## # #### ####</td>
+                    <td></td>
+                   <td><button class="btn_ver"><a href="modificar_contacto.html">*</a></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn_form"><a href="agregar_contacto.html">Agregar</a></button>
+
+        <h1>Medicamentos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Med.</th>
+                    <th>Tipo</th>
+                    <th>Frecuencia</th>
+                    <th>Dosis</th>
+                    <th>Fecha inicio</th>
+                    <th>Fecha Termino</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Med.</td>
+                    <td></td>
+                    <td>Dias/Horas</td>
+                    <td>Gramaje/ML</td>
+                    <td>DD/MM/YYYY</td>
+                    <td>DD/MM/YYYY</td>
+                    <td><button class="btn_ver"><a href="modificar_medicamento.html">*</a></button></td>
+                </tr>
+            </tbody>
+            
+        </table>
+        <button class="btn_form"><a href="agregar_medicamento.html">Agregar</a></button>
+    </div>
+
+    <div class="right-container_ficha">
+        <h2>Especificaiones del paciente (Cuidados, Indicaciones...)</h2>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="20" disabled></textarea>
+        <button class="btn"><a href="ficha_residentes.html">Generar Ficha</a></button>
+        <button class="btn"><a href="historial_fichas.html">Historial de fichas</a></button>
+    </div>
+</div>
+
+
+<footer>
+    <button class="btn"><a href="lista_residentes.html">Volver</a></button>
+</footer>
+</body>
+</html>

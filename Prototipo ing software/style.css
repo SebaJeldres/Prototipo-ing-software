@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: beige;
+}
+
+header {
+    width: 100%;
+    background-color: burlywood;
+    padding: 0.2rem 0;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.container {
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+.container_historial_mandatos {
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid burlywood;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 48%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: black;
+    background-color: beige;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+.btn:hover {
+    background-color: #d3a177;
+}
+
+.btn a:hover {
+    color: black;
+}
+
+.container_menu_par {
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.container_menu_par h3 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.info-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.info-list li {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: burlywood;
+    position: fixed;
+    bottom: 0;
+    margin-top: 2rem;
+}
+
+footer .btn {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: beige;
+}
+
+td {
+    background-color: beige;
+}
+
+
+.menu_trabajador {
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+.btn_menu{
+   
+    margin-bottom: 2rem;
+    flex: 1 1 calc(50% - 2rem);
+}
+.left-container, .right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container_general_ficha{
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.container_info_residentes {
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    gap: 2rem;
+    font-size: 10px;
+}
+.left-container_ficha {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right-container_ficha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.btn_ver{
+    width: 48%;
+    padding: 0.3rem;
+    font-size: 1rem;
+    color: black;
+    background-color: burlywood;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn_ver a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+.btn_ver:hover {
+    background-color: beige;
+}
+
+.btn_ver a:hover {
+    color: black;
+}
+
+.container_historial_transacciones{
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    font-size: 0.8rem;
+}
+.contenedor_transacciones{
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.contenedor_stock{
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.contenedor_insumos {
+    background-color: burlywood;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    gap: 2rem;
+}
+
+.left-container_insumos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right-container_insumos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.btn_form {
+    width: 30%;
+    padding: 0.4rem;
+    font-size: 1rem;
+    color: black;
+    background-color: beige;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn_form a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+.btn_form:hover {
+    background-color: #d3a177;
+}
+
+.btn_form a:hover {
+    color: black;
+}
+.container_Ficha_historial{
+    background-color: burlywood;
+    padding: 4rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    font-size: 0.7rem;
+}

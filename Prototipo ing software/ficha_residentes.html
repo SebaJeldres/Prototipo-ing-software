@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generar Ficha residentes</title>
+</head>
+
+    <header>
+        <h1>Fund. Apoyo</h1>
+    </header>
+<body>
+    <div class="container_general_ficha">
+        <div class="left-container">
+            <h3>Generar Ficha</h3>
+
+            <div class="mb-3 contenedor_ficha">
+                <label for="fechaInicio" class="form-label">Fecha</label>
+                <input type="text" class="form-control" id="fechaInicio" placeholder="DD/MM/YYYY">
+            </div>
+            <div class="mb-3">
+                <label for="trabajadorResponsable" class="form-label">Trabajador responsable</label>
+                <input type="text" class="form-control" id="trabajadorResponsable" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="rut" class="form-label">Rut</label>
+                <input type="text" class="form-control" id="rut" placeholder="11.111.111-1">
+            </div>
+            <div class="mb-3">
+                <label for="nombreResidente" class="form-label">Nombre residente</label>
+                <input type="text" class="form-control" id="nombreResidente" placeholder="Nombre" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="rutResidente" class="form-label">Rut residente</label>
+                <input type="text" class="form-control" id="rutResidente" placeholder="11.111.111-1" disabled>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <h2>Especificaciones del paciente (Cuidados, Indicaciones...)</h2>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
+            <button class="btn">Crear Ficha</button>
+        </div>
+    </div>
+
+    <footer>
+        <button class="btn"><a href="info_detall_residentes.html">Volver</a></button>
+    </footer>
+</body>
+</html>
