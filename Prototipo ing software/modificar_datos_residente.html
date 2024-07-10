@@ -6,40 +6,40 @@
     <link rel="stylesheet" href="style.css">
     <title>Modificar Residente</title>
 </head>
+<body>
 <header>
     <h1>Fund. Apoyo</h1>
 </header>
-<body>
-<h1>Mod. datos residente</h1>
-    <div class="container_general_ficha">
-    
-
-    <div class="mb-3 ">
-        <label for="fechaInicio" class="form-label">Nombre residente</label>
-        <input type="text" class="form-control" id="fechaInicio" placeholder="Nombre">
+<h1>Modificar Datos del Residente</h1>
+<div class="container_general_ficha">
+    <div class="mb-3">
+        <label for="nombreResidente" class="form-label">Nombre residente</label>
+        <input type="text" class="form-control" id="nombreResidente" placeholder="Nombre">
     </div>
     <div class="mb-3">
-        <label for="trabajadorResponsable" class="form-label">Apellido residente</label>
-        <input type="text" class="form-control" id="trabajadorResponsable" placeholder="Apellido">
+        <label for="apellidoResidente" class="form-label">Apellido residente</label>
+        <input type="text" class="form-control" id="apellidoResidente" placeholder="Apellido">
     </div>
     <div class="mb-3">
         <label for="rut" class="form-label">Rut</label>
         <input type="text" class="form-control" id="rut" placeholder="11.111.111-1" disabled>
     </div>
     <div class="mb-3">
-        <label for="nombreResidente" class="form-label">Edad</label>
-        <input type="text" class="form-control" id="nombreResidente" placeholder="Edad">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="edad" placeholder="Edad">
     </div>
     <div class="mb-3">
-        <label for="rutResidente" class="form-label">Fecha de ingreso</label>
-        <input type="text" class="form-control" id="rutResidente" placeholder="DD/MM/YYYY" disabled>
+        <label for="fechaIngreso" class="form-label">Fecha de ingreso</label>
+        <input type="text" class="form-control" id="fechaIngreso" placeholder="DD/MM/YYYY">
     </div>
 
-    <button class="btn"><a href="info_detall_residentes.html">Modificar</a></button>
+    <button class="btn" onclick="guardarCambios()">Guardar Cambios</button>
 </div>
-    
-</body>
+
 <footer>
     <button class="btn"><a href="info_detall_residentes.html">Volver</a></button>
 </footer>
+
+<script src="funciones.js"></script>
+</body>
 </html>

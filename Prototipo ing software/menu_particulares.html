@@ -7,19 +7,31 @@
     <title>Menu Particulares</title>
 </head>
     <header>
-        <h1>Fund. Apoyo</h1>
+        <h1>Menu de opciones para Particulares</h1>
     </header>
 <body>
 
     <div class="container_menu_par">
-        <h3>Menu de opciones para Particulares</h3>
-        <ul class="info-list">
-            <li>Nombre: </li>
-            <li>Apellido: </li>
-            <li>Correo: </li>
-            <li>Teléfono: </li>
-            <li>Nro de mandatos: </li>
-        </ul>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" value="Sergio" readonly disabled>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" value="Olivar" readonly disabled>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correo" value="sergio.olivar@gmail.com" readonly disabled>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" value="9 3423 5487" readonly disabled>
+            </div>
+            <div class="mb-3">
+                <label for="mandatos" class="form-label">Nro de mandatos</label>
+                <input type="text" class="form-control" id="mandatos" value="3 Mandatos" readonly disabled>
+            </div>
         <button class="btn"><a href="historial_mandatos.html">Historial de mandatos</a></button>
         <button class="btn"><a href="base_mandato.html">Generar mandato</a></button>
     </div>

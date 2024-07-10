@@ -4,46 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Agregar contacto</title>
+    <title>Agregar Contacto</title>
 </head>
+<body>
 <header>
     <h1>Fund. Apoyo</h1>
 </header>
-<body>
-<h1>Mod. datos contacto emergencia</h1>
-    <div class="container_general_ficha">
-    
+<div class="container formulario_contacto_container">
+    <h1>Agregar Nuevo Contacto de Emergencia</h1>
 
-    <div class="mb-3 ">
-        <label for="fechaInicio" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="fechaInicio" placeholder="Nombre">
-    </div>
-    <div class="mb-3">
-        <label for="trabajadorResponsable" class="form-label">Apellido</label>
-        <input type="text" class="form-control" id="trabajadorResponsable" placeholder="Apellido">
-    </div>
-    <div class="mb-3">
-        <label for="rut" class="form-label">Correo</label>
-        <input type="email" class="form-control" id="rut" placeholder="correo@gmail.com" >
-    </div>
-    <div class="mb-3">
-        <label for="nombreResidente" class="form-label">Telefono 1</label>
-        <input type="text" class="form-control" id="nombreResidente" placeholder="">
-    </div>
-    <div class="mb-3">
-        <label for="nombreResidente" class="form-label">Telefono 2</label>
-        <input type="text" class="form-control" id="nombreResidente" placeholder="">
-    </div>
-    <div class="mb-3">
-        <label for="rutResidente" class="form-label">Direccion</label>
-        <input type="text" class="form-control" id="rutResidente" placeholder="" >
-    </div>
-
-    <button class="btn"><a href="info_detall_residentes.html">Agregar</a></button>
+    <form class="formulario_contacto_emergencia">
+        <div class="formulario_mb-3">
+            <label for="nombre" class="formulario_form-label">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="formulario_form-control" required>
+        </div>
+        <div class="formulario_mb-3">
+            <label for="apellido" class="formulario_form-label">Apellido</label>
+            <input type="text" id="apellido" name="apellido" class="formulario_form-control" required>
+        </div>
+        <div class="formulario_mb-3">
+            <label for="correo" class="formulario_form-label">Correo</label>
+            <input type="email" id="correo" name="correo" class="formulario_form-control" required>
+        </div>
+        <div class="formulario_mb-3">
+            <label for="telefono1" class="formulario_form-label">Teléfono 1</label>
+            <input type="text" id="telefono1" name="telefono1" class="formulario_form-control" required>
+        </div>
+        <div class="formulario_mb-3">
+            <label for="telefono2" class="formulario_form-label">Teléfono 2</label>
+            <input type="text" id="telefono2" name="telefono2" class="formulario_form-control">
+        </div>
+        <div class="formulario_mb-3">
+            <label for="direccion" class="formulario_form-label">Dirección</label>
+            <input type="text" id="direccion" name="direccion" class="formulario_form-control">
+        </div>
+        <button class="formulario_btn_form" type="submit">Agregar Contacto</button>
+    </form>
 </div>
-    
-</body>
 <footer>
-    <button class="btn"><a href="info_detall_residentes.html">Volver</a></button>
+    <button class="btn_form"><a href="info_detall_residentes.html">Volver</a></button>
 </footer>
+<script src="funciones.js"></script>
+</body>
 </html>

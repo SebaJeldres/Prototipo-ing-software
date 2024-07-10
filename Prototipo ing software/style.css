@@ -347,3 +347,141 @@ td {
     text-align: left;
     font-size: 0.7rem;
 }
+/* Contenedor del formulario con ancho mayor */
+.formulario_contacto_container {
+    background-color: burlywood;
+    padding: 1.5rem; /* Padding interno del formulario */
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px; /* Ancho máximo aumentado */
+    text-align: left;
+}
+
+/* Formulario en dos columnas */
+.formulario_contacto_emergencia {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    gap: 1rem; /* Espacio entre columnas */
+}
+
+.formulario_mb-3 {
+    margin-bottom: 1rem; /* Espacio inferior entre los campos */
+}
+
+.formulario_form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario_form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    border: 1px solid burlywood;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulario_btn_form {
+    grid-column: span 2; /* Hace que el botón ocupe ambas columnas */
+    width: 100%;
+    padding: 0.75rem; /* Padding del botón */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    color: black;
+    background-color: beige;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.formulario_btn_form:hover {
+    background-color: #d3a177;
+}
+
+.formulario_btn_form a {
+    color: black;
+    text-decoration: none;
+}
+
+/* style.css */
+
+/* Estilos generales del formulario */
+.formulario_container {
+    background-color: burlywood;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.formulario_container .mb-3 {
+    margin-bottom: 1rem;
+}
+
+.formulario_container .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario_container .form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid burlywood;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: beige;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d3a177;
+}
+
+/* Estilos para la tabla */
+#medicamentosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+#medicamentosTable th, #medicamentosTable td {
+    border: 1px solid #333;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#medicamentosTable th {
+    background-color: beige;
+}
+
+#medicamentosTable td {
+    background-color: #f9f9f9;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+
