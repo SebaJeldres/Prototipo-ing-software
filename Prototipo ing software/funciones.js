@@ -23,7 +23,7 @@ document.getElementById('formAgregarTrabajador').addEventListener('submit', func
     localStorage.setItem('trabajadores', JSON.stringify(trabajadores));
     
     alert('Cuenta creada correctamente');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 });
 
 function login() {
