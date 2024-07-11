@@ -4,82 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Informacion detallada</title>
+    <title>Información Detallada</title>
 </head>
-
+<body>
     <header>
         <h1>Fund. Apoyo</h1>
     </header>
-<body>
-<div class="container_info_residentes">
-    <div class="left-container_ficha">
-        <h3>Residente</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nombre residente</th>
-                    <th>Apellido Residente</th>
-                    <th>Rut</th>
-                    <th>Edad</th>
-                    <th>Fecha de ingreso</th>
-                </tr>
-            </thead>
-            <tbody id="tabla-residentes">
-                <!-- Los datos se cargarán aquí desde el script -->
-            </tbody>
-        </table>
-        <button class="btn_form"><a href="modificar_datos_residente.html">Modificar</a></button>
+    <div class="container_info_residentes">
+        <div class="left-container_ficha">
+            <h3>Residente</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre residente</th>
+                        <th>Apellido Residente</th>
+                        <th>Rut</th>
+                        <th>Edad</th>
+                        <th>Fecha de ingreso</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-residentes">
+                    <!-- Los datos se cargarán aquí desde el script -->
+                </tbody>
+            </table>
+            <button class="btn_form"><a href="modificar_datos_residente.html">Modificar</a></button>
 
-        <h3>Contacto de emergencia</h3>
-        <table id="tabla-contactos">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Correo</th>
-                    <th>Tel. de emerg.</th>
-                    <th>Tel. de emerg. 2</th>
-                    <th>Dirección</th>
-                    <th>Eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Filas de la tabla se agregarán dinámicamente con JavaScript -->
-            </tbody>
-        </table>
-        <button class="btn_form"><a href="agregar_contacto.html">Agregar</a></button>
+            <h3>Contacto de emergencia</h3>
+            <table id="tabla-contactos">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Tel. de emerg.</th>
+                        <th>Tel. de emerg. 2</th>
+                        <th>Dirección</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de la tabla se agregarán dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+            <button class="btn_form"><a href="agregar_contacto.html">Agregar</a></button>
 
-        <h3>Medicamentos</h3>
-        <table id="medicamentosTable">
-            <thead>
-                <tr>
-                    <th>Med.</th>
-                    <th>Tipo</th>
-                    <th>Frecuencia</th>
-                    <th>Dosis</th>
-                    <th>Fecha inicio</th>
-                    <th>Fecha término</th>
-                    <th>Eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Las filas se añadirán aquí -->
-            </tbody>
-        </table>
-        <button class="btn_form"><a href="agregar_medicamento.html">Agregar</a></button>
+            <h3>Medicamentos</h3>
+            <table id="medicamentosTable">
+                <thead>
+                    <tr>
+                        <th>Med.</th>
+                        <th>Tipo</th>
+                        <th>Frecuencia</th>
+                        <th>Dosis</th>
+                        <th>Fecha inicio</th>
+                        <th>Fecha término</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas se añadirán aquí -->
+                </tbody>
+            </table>
+            <button class="btn_form"><a href="agregar_medicamento.html">Agregar</a></button>
+        </div>
+
+        <div class="right-container_ficha">
+            <textarea class="form-control" id="mostrarEspecificaciones" rows="20" placeholder="Especificaciones del paciente (Cuidados, Indicaciones...)" disabled></textarea>
+            <button class="btn"><a href="ficha_residentes.html">Generar Ficha</a></button>
+            <button class="btn"><a href="historial_fichas.html">Historial de Fichas</a></button>
+        </div>
     </div>
 
-    <div class="right-container_ficha">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="20" placeholder="Especificaiones del paciente (Cuidados, Indicaciones...)" disabled></textarea>
-        <button class="btn"><a href="ficha_residentes.html">Generar Ficha</a></button>
-        <button class="btn"><a href="historial_fichas.html">Historial de fichas</a></button>
-    </div>
-</div>
-
-
-<footer>
-    <button class="btn"><a href="lista_residentes.html">Volver</a></button>
-</footer>
-<script src="funciones.js"></script>
+    <footer>
+        <button class="btn"><a href="lista_residentes.html">Volver</a></button>
+    </footer>
+    <script src="funciones.js"></script>
 </body>
 </html>
+

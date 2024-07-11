@@ -50,21 +50,6 @@ function guardarCambios() {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Cargar datos del localStorage
-    const nombre = localStorage.getItem("nombreResidente") || "";
-    const apellido = localStorage.getItem("apellidoResidente") || "";
-    const rut = localStorage.getItem("rut") || "";
-    const edad = localStorage.getItem("edad") || "";
-    const fechaIngreso = localStorage.getItem("fechaIngreso") || "";
-
-    document.getElementById("nombreResidente").value = nombre;
-    document.getElementById("apellidoResidente").value = apellido;
-    document.getElementById("rut").value = rut;
-    document.getElementById("edad").value = edad;
-    document.getElementById("fechaIngreso").value = fechaIngreso;
-});
-
 function guardarCambios() {
     const nombre = document.getElementById("nombreResidente").value;
     const apellido = document.getElementById("apellidoResidente").value;
@@ -79,7 +64,8 @@ function guardarCambios() {
 
     alert("Cambios guardados");
 }
-document.addEventListener("DOMContentLoaded", () => {
+
+function cargarDatos() {
     const nombre = localStorage.getItem("nombreResidente") || "Maria";
     const apellido = localStorage.getItem("apellidoResidente") || "Pinto";
     const rut = localStorage.getItem("rut") || "5.675.987-K";
@@ -96,7 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${fechaIngreso}</td>
         </tr>
     `;
-});
+}
+
+document.addEventListener("DOMContentLoaded", cargarDatos);
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const tablaContactos = document.getElementById("tabla-contactos");
@@ -233,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Celda de eliminar
             const deleteCell = row.insertCell();
             const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Eliminar';
+            deleteButton.textContent = '*';
             deleteButton.className = 'btn btn-danger';
             deleteButton.addEventListener('click', function() {
                 if (confirm('¿Estás seguro de que deseas eliminar este medicamento?')) {
@@ -277,4 +266,39 @@ document.getElementById('agregarMedicamento').addEventListener('click', function
 
     // Redirigir a la página de la tabla de medicamentos
     window.location.href = 'mostrar_medicamentos.html';
+});
+
+
+// Función para guardar los datos de la ficha en localStorage
+function guardarFicha() {
+    const fechaInicio = document.getElementById("fechaInicio").value;
+    const trabajadorResponsable = document.getElementById("trabajadorResponsable").value;
+    const rut = document.getElementById("rut").value;
+    const especificacionesPaciente = document.getElementById("exampleFormControlTextarea1").value;
+
+    // Guardar en localStorage
+    localStorage.setItem("fechaInicio", fechaInicio);
+    localStorage.setItem("trabajadorResponsable", trabajadorResponsable);
+    localStorage.setItem("rut", rut);
+    localStorage.setItem("especificacionesPaciente", especificacionesPaciente);
+
+    alert("Ficha guardada correctamente");
+}
+
+// Función para cargar los datos en la página de información detallada
+function cargarFicha() {
+    const especificacionesPaciente = localStorage.getItem("especificacionesPaciente") || "";
+
+    // Mostrar en el textarea
+    const textarea = document.getElementById("mostrarEspecificaciones");
+    if (textarea) {
+        textarea.value = especificacionesPaciente;
+    }
+}
+
+// Ejecutar cargarFicha() al cargar la página de información detallada
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.pathname.endsWith("info_detall_residentes.html")) {
+        cargarFicha();
+    }
 });

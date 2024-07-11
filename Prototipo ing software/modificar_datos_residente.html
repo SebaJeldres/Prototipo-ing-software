@@ -7,39 +7,37 @@
     <title>Modificar Residente</title>
 </head>
 <body>
-<header>
-    <h1>Fund. Apoyo</h1>
-</header>
-<h1>Modificar Datos del Residente</h1>
-<div class="container_general_ficha">
-    <div class="mb-3">
-        <label for="nombreResidente" class="form-label">Nombre residente</label>
-        <input type="text" class="form-control" id="nombreResidente" placeholder="Nombre">
+    <header>
+        <h1>Fund. Apoyo</h1>
+    </header>
+    <h1>Modificar Datos del Residente</h1>
+    <div class="container_general_ficha">
+        <div class="mb-3">
+            <label for="nombreResidente" class="form-label">Nombre residente</label>
+            <input type="text" class="form-control" id="nombreResidente" placeholder="Nombre">
+        </div>
+        <div class="mb-3">
+            <label for="apellidoResidente" class="form-label">Apellido residente</label>
+            <input type="text" class="form-control" id="apellidoResidente" placeholder="Apellido">
+        </div>
+        <div class="mb-3">
+            <label for="rut" class="form-label">Rut</label>
+            <input type="text" class="form-control" id="rut" placeholder="11.111.111-1" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="text" class="form-control" id="edad" placeholder="Edad">
+        </div>
+        <div class="mb-3">
+            <label for="fechaIngreso" class="form-label">Fecha de ingreso</label>
+            <input type="text" class="form-control" id="fechaIngreso" placeholder="DD/MM/YYYY">
+        </div>
+        <button class="btn" onclick="guardarCambios()">Guardar Cambios</button>
     </div>
-    <div class="mb-3">
-        <label for="apellidoResidente" class="form-label">Apellido residente</label>
-        <input type="text" class="form-control" id="apellidoResidente" placeholder="Apellido">
-    </div>
-    <div class="mb-3">
-        <label for="rut" class="form-label">Rut</label>
-        <input type="text" class="form-control" id="rut" placeholder="11.111.111-1" disabled>
-    </div>
-    <div class="mb-3">
-        <label for="edad" class="form-label">Edad</label>
-        <input type="text" class="form-control" id="edad" placeholder="Edad">
-    </div>
-    <div class="mb-3">
-        <label for="fechaIngreso" class="form-label">Fecha de ingreso</label>
-        <input type="text" class="form-control" id="fechaIngreso" placeholder="DD/MM/YYYY">
-    </div>
-
-    <button class="btn" onclick="guardarCambios()">Guardar Cambios</button>
-</div>
-
-<footer>
-    <button class="btn"><a href="info_detall_residentes.html">Volver</a></button>
-</footer>
-
-<script src="funciones.js"></script>
+    <footer>
+        <button class="btn"><a href="info_detall_residentes.html">Volver</a></button>
+    </footer>
+    <script src="funciones.js"></script>
 </body>
 </html>
+

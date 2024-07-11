@@ -472,16 +472,17 @@ td {
 }
 
 #medicamentosTable td {
-    background-color: #f9f9f9;
+    background-color: beige;
 }
 
 .btn-danger {
-    background-color: red;
-    color: white;
+    background-color: burlywood;
+    color: beige;
+    font-size: 0.4rem;
 }
 
 .btn-danger:hover {
-    background-color: darkred;
+    background-color: burlywood;
 }
 
 

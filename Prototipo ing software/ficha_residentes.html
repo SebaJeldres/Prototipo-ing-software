@@ -6,11 +6,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Generar Ficha residentes</title>
 </head>
-
+<body>
     <header>
         <h1>Fund. Apoyo</h1>
     </header>
-<body>
     <div class="container_general_ficha">
         <div class="left-container">
             <h3>Generar Ficha</h3>
@@ -40,12 +39,15 @@
         <div class="right-container">
             <h2>Especificaciones del paciente (Cuidados, Indicaciones...)</h2>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
-            <button class="btn">Crear Ficha</button>
+            <button class="btn" onclick="guardarFicha()">Crear Ficha</button>
         </div>
     </div>
 
     <footer>
         <button class="btn"><a href="info_detall_residentes.html">Volver</a></button>
     </footer>
+
+    <script src="funciones.js"></script>
 </body>
 </html>
+
