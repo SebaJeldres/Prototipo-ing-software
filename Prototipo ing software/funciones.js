@@ -1,19 +1,55 @@
+document.getElementById('formAgregarTrabajador').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const contrasena = document.getElementById('contrasena').value;
+    const tipoTrabajador = document.getElementById('tipoTrabajador').value;
+
+    const trabajador = {
+        nombre,
+        correo,
+        contrasena,
+        tipoTrabajador
+    };
+
+    // Obtener la lista de trabajadores desde localStorage
+    let trabajadores = JSON.parse(localStorage.getItem('trabajadores')) || [];
+
+    // Agregar el nuevo trabajador a la lista
+    trabajadores.push(trabajador);
+
+    // Guardar la lista actualizada en localStorage
+    localStorage.setItem('trabajadores', JSON.stringify(trabajadores));
+    
+    alert('Cuenta creada correctamente');
+    window.location.href = 'login.html';
+});
+
 function login() {
     const usuario = document.getElementById('usuario').value;
     const contrasena = document.getElementById('contrasena').value;
-    
-    if (contrasena === '12345') {
-        if (usuario === 'trabajador') {
+
+    // Obtener la lista de trabajadores desde localStorage
+    const trabajadores = JSON.parse(localStorage.getItem('trabajadores')) || [];
+
+    // Buscar al usuario en la lista de trabajadores
+    const trabajador = trabajadores.find(trab => trab.correo === usuario && trab.contrasena === contrasena);
+
+    if (trabajador) {
+        if (trabajador.tipoTrabajador === 'trabajador') {
             window.location.href = 'menu_trabajador.html';
-        } else if (usuario === 'particular') {
+        } else if (trabajador.tipoTrabajador === 'particular') {
             window.location.href = 'menu_particulares.html';
         } else {
-            alert('Usuario no válido. Intente nuevamente.');
+            alert('Tipo de usuario no válido. Intente nuevamente.');
         }
     } else {
-        alert('Contraseña incorrecta. Intente nuevamente.');
+        alert('Usuario o contraseña incorrectos. Intente nuevamente.');
     }
 }
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const montoAportar = localStorage.getItem("montoAportar") || "$50.000";

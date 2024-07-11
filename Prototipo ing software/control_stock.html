@@ -5,40 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Control de Stock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: burlywood;
+            padding: 0.2rem 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .contenedor_stock {
+            margin: 2rem;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: burlywood;
+            color: black;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: burlywood;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .btn a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .btn {
+            background-color: beige;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d3a177;
+        }
+    </style>
 </head>
+<body>
     <header>
         <h1>Fund. Apoyo</h1>
     </header>
-<body>
 
     <div class="contenedor_stock">
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre Producto</th>
-                <th>Id</th>
-                <th>Gramaje/ML</th>
-                <th>Stock</th>
-                <th>Fecha Ultima Compra</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Nombre</td>
-                <td>#111111</td>
-                <td>Gramaje/ML</td>
-                <td>Cantidad</td>
-                <td>DD/MM/YYYY</td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre Producto / Gramaje</th>
+                    <th>Id</th>
+                    <th>Unidades</th>
+                    <th>Stock</th>
+                    <th>Fecha Última Compra</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos">
+                <!-- Productos iniciales aquí -->
+            </tbody>
+        </table>
     </div>
 
+    <div id="totalStock"></div>
+    <div id="totalProductos"></div>
 
-    
-</body>
     <footer>
         <button class="btn"><a href="menu_trabajador.html">Volver</a></button>
     </footer>
+
+    <script>
+        function cargarProductos() {
+            const productos = JSON.parse(localStorage.getItem('productos')) || [];
+            const tablaProductos = document.getElementById('tablaProductos');
+
+            // Ordenar productos por ID de menor a mayor
+            productos.sort((a, b) => parseInt(a.idProducto, 10) - parseInt(b.idProducto, 10));
+
+            productos.forEach(producto => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                    <td>${producto.nombreProducto}</td>
+                    <td>${producto.idProducto}</td>
+                    <td>${producto.gramajeProducto}</td>
+                    <td>${producto.stockProducto}</td>
+                    <td>${producto.fechaCompraProducto}</td>
+                `;
+                tablaProductos.appendChild(fila);
+            });
+
+            actualizarTotalStock(productos);
+            contarProductos(productos);
+        }
+
+        function actualizarTotalStock(productos) {
+            let totalStock = 0;
+
+            productos.forEach(producto => {
+                // Asegúrate de que el valor de stock sea un número
+                const stockValue = parseInt(producto.stockProducto.match(/\d+/)[0]);
+                totalStock += stockValue;
+            });
+
+            document.getElementById('totalStock').textContent = `Cantidad total de productos en stock: ${totalStock}`;
+        }
+
+        function contarProductos(productos) {
+            // Contar el número total de productos
+            const totalProductos = productos.length;
+            document.getElementById('totalProductos').textContent = `Número total de productos: ${totalProductos}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarProductos);
+    </script>
+</body>
 </html>
+
+
+
+

@@ -13,7 +13,7 @@
 <div class="container formulario_contacto_container">
     <h1>Agregar Nuevo Trabajador</h1>
 
-    <form class="formulario_contacto_emergencia">
+    <form class="formulario_contacto_emergencia" id="formAgregarTrabajador">
         <div class="formulario_mb-3">
             <label for="nombre" class="formulario_form-label">Nombre</label>
             <input type="text" id="nombre" name="nombre" class="formulario_form-control" required>
@@ -25,19 +25,22 @@
         </div>
 
         <div class="formulario_mb-3">
-            <label for="contraseña" class="formulario_form-label">Contraseña</label>
-            <input type="text" id="contraseña" name="contraseña" class="formulario_form-control" required>
+            <label for="contrasena" class="formulario_form-label">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" class="formulario_form-control" required>
         </div>
 
         <div class="formulario_mb-3">
-            <label for="tipo trabajador" class="formulario_form-label">Tipo Trabajador</label>
-            <input type="text" id="tipo Trabajador" name="tipo Trabajador" class="formulario_form-control">
+            <label for="tipoTrabajador" class="formulario_form-label">Tipo Trabajador</label>
+            <input type="text" id="tipoTrabajador" name="tipoTrabajador" class="formulario_form-control" required>
         </div>
 
-        <button class="formulario_btn_form" type="submit" > <a href="index.html">Agregar Trabajador</a></button>
+        <button class="formulario_btn_form" type="submit">Agregar Trabajador</button>
     </form>
 </div>
 
 <script src="funciones.js"></script>
 </body>
 </html>
+
+
+
